@@ -18,7 +18,7 @@ class Order(models.Model):
         self.save()
 
     @staticmethod
-    def get_order_by_customeCategoriesr(customer_id):
+    def get_order_by_customer(customer_id):
         return Order.objects.filter(customer=customer_id).order_by("-date")
     
     def __str__(self):
